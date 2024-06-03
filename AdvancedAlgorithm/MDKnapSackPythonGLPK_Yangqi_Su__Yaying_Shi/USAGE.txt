@@ -1,0 +1,15 @@
+Extra Credit:
+By: Yangqi Su and Yaying Shi
+
+Run python script first to generate lp file:
+
+python MKSLPgenerator.py number_of_objects size_constraint weight_constraint
+
+
+Then Run the following:
+
+glpsol --lp MKS_MLP.lp -o result.o
+
+The results will be in result.o file
+
+The program can run quite fast up to 1000000 variables (< 3 minute for weight_constraint =  20000, size_constraint = 100000), however, if weight constraints and size_constraints were increased by a factor of 10, it slows down drastically taking at least over an hour.
